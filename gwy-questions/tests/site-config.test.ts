@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from "vitest";
-import { getGoogleSiteVerification, getSiteUrl } from "@/lib/site-config";
+import { getBaiduSiteVerification, getGoogleSiteVerification, getSiteUrl } from "@/lib/site-config";
 
 const originalEnv = { ...process.env };
 
@@ -24,5 +24,11 @@ describe("site config", () => {
     delete process.env.GOOGLE_SITE_VERIFICATION;
 
     expect(getGoogleSiteVerification()).toBe("8W7uWYBgh4Ifd4wWfhrTKYe_B6ghHkqjBt-LRViCv6g");
+  });
+
+  it("uses the Baidu site verification token", () => {
+    delete process.env.BAIDU_SITE_VERIFICATION;
+
+    expect(getBaiduSiteVerification()).toBe("codeva-YKS51BNT1I");
   });
 });
