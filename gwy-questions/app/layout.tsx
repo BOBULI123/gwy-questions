@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookOpenCheck } from "lucide-react";
+import { getSiteUrl } from "@/lib/site-config";
 import "./globals.css";
 
+const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gwy-questions.vercel.app"),
+  metadataBase: new URL(getSiteUrl()),
   title: "公务员面试真题库 - 2015-2026国考省考结构化面试真题及解析",
   description:
     "覆盖国考、各省省考、事业单位面试真题，AI智能生成三版本解析（小白版/进阶版/高分版），每日更新，助你上岸。",
-  keywords: "公务员面试真题,国考面试,省考面试,结构化面试,面试真题解析,公务员面试题库"
+  keywords: "公务员面试真题,国考面试,省考面试,结构化面试,面试真题解析,公务员面试题库",
+  verification: googleVerification ? { google: googleVerification } : undefined
 };
 
 export default function RootLayout({
