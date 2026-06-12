@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 45% 97%;
+    --foreground: 216 35% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 216 35% 13%;
+    --primary: 202 84% 28%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 28 78% 92%;
+    --secondary-foreground: 25 62% 23%;
+    --muted: 198 20% 91%;
+    --muted-foreground: 215 18% 39%;
+    --accent: 167 42% 88%;
+    --accent-foreground: 174 72% 18%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 24% 84%;
+    --input: 210 24% 84%;
+    --ring: 202 84% 28%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  ::selection {
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+}
+
+@layer components {
+  .paper-grid {
+    background-image:
+      linear-gradient(rgba(18, 74, 105, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(18, 74, 105, 0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .gold-highlight {
+    background: linear-gradient(transparent 56%, rgba(245, 180, 66, 0.34) 56%);
+    border-radius: 3px;
+    padding: 0 2px;
+  }
+}
