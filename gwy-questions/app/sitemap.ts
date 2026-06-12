@@ -25,15 +25,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const questionRoutes = questions.map((question) => ({
     url: `${siteUrl}/question/${question.id}`,
     lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.7
+    changeFrequency: "weekly" as const,
+    priority: 0.9
   }));
 
   const hotRoutes = hotTopics.map((topic) => ({
     url: `${siteUrl}/hot/${topic.id}`,
     lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.7
+    changeFrequency: "weekly" as const,
+    priority: 0.8
   }));
 
   return [...staticRoutes, ...typeRoutes, ...questionRoutes, ...hotRoutes];
