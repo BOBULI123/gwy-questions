@@ -7,6 +7,7 @@ import { FavoriteButton } from "@/components/site/favorite-button";
 import { ParseTabs } from "@/components/site/parse-tabs";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { buildQuestionMetadata } from "@/lib/question-metadata";
 import { getQuestionSummary } from "@/lib/question-utils";
 
 type Props = {
@@ -24,13 +25,10 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: Props): Metadata {
   const question = findQuestion(params.id);
   if (!question) {
-    return {};
+    return { title: "题目未找到" };
   }
 
-  return {
-    title: `${question.year}国考面试真题_${question.typeName}_${question.title.slice(0, 18)}`,
-    description: getQuestionSummary(question, 110)
-  };
+  return buildQuestionMetadata(question);
 }
 
 export default function QuestionPage({ params }: Props) {
