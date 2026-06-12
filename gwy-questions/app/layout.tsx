@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookOpenCheck } from "lucide-react";
-import { getSiteUrl } from "@/lib/site-config";
+import { getGoogleSiteVerification, getSiteUrl } from "@/lib/site-config";
 import "./globals.css";
 
-const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
+const googleVerification = getGoogleSiteVerification();
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),

@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from "vitest";
-import { getSiteUrl } from "@/lib/site-config";
+import { getGoogleSiteVerification, getSiteUrl } from "@/lib/site-config";
 
 const originalEnv = { ...process.env };
 
@@ -14,9 +14,15 @@ describe("site config", () => {
     expect(getSiteUrl()).toBe("https://example.com");
   });
 
-  it("falls back to the default Vercel domain", () => {
+  it("falls back to the custom production domain", () => {
     delete process.env.NEXT_PUBLIC_SITE_URL;
 
-    expect(getSiteUrl()).toBe("https://gwy-questions.vercel.app");
+    expect(getSiteUrl()).toBe("https://www.gwyms88.com");
+  });
+
+  it("uses the Google site verification token", () => {
+    delete process.env.GOOGLE_SITE_VERIFICATION;
+
+    expect(getGoogleSiteVerification()).toBe("8W7uWYBgh4Ifd4wWfhrTKYe_B6ghHkqjBt-LRViCv6g");
   });
 });
