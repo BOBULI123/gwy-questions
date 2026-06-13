@@ -4,7 +4,7 @@ import { typeMetas } from "@/lib/question-utils";
 
 describe("expanded question bank", () => {
   it("only exposes verified real recalled questions with sources and original answers", () => {
-    expect(questions.length).toBeGreaterThanOrEqual(15);
+    expect(questions.length).toBeGreaterThanOrEqual(50);
     expect(
       questions.every(
         (question) =>
