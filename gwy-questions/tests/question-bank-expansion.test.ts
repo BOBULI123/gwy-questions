@@ -3,17 +3,26 @@ import { questions } from "@/app/data/questions";
 import { typeMetas } from "@/lib/question-utils";
 
 describe("expanded question bank", () => {
-  it("contains a substantial first batch of sourced questions with original answers", () => {
-    expect(questions.length).toBeGreaterThanOrEqual(2000);
-
-    const sourcedQuestions = questions.filter((question) => question.sourceUrl);
-    expect(sourcedQuestions.length).toBeGreaterThanOrEqual(1950);
+  it("only exposes verified real recalled questions with sources and original answers", () => {
+    expect(questions.length).toBeGreaterThanOrEqual(15);
     expect(
-      sourcedQuestions.every(
+      questions.every(
         (question) =>
+          question.origin === "verified_recall" &&
+          question.sourceUrl &&
           question.sourceName &&
           question.referenceAnswer &&
           question.referenceAnswer.length >= 120
+      )
+    ).toBe(true);
+  });
+
+  it("does not expose simulated or generated questions in the production bank", () => {
+    expect(
+      questions.every((question) =>
+        !/(?:\u6a21\u62df\u9898|\u6a21\u62df\u9898\u98ce\u683c|\u6279\u91cf\u751f\u6210|\u9ad8\u9891\u6a21\u62df\u9898)/.test(
+          `${question.id}${question.title}${question.content}`
+        )
       )
     ).toBe(true);
   });

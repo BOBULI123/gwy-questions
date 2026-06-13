@@ -8,6 +8,8 @@ export type QuestionType =
 
 export type Difficulty = "easy" | "medium" | "hard";
 
+export type QuestionOrigin = "verified_recall";
+
 export type Question = {
   id: string;
   year: number;
@@ -20,6 +22,7 @@ export type Question = {
   referenceAnswer?: string;
   sourceName?: string;
   sourceUrl?: string;
+  origin?: QuestionOrigin;
 };
 
 export const typeMetas: Array<{
