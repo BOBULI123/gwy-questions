@@ -1,4 +1,5 @@
 import { publicQuestions } from "@/app/data/public-questions";
+import { publicQuestionsBatch2 } from "@/app/data/public-questions-batch-2";
 import type { Question } from "@/lib/question-utils";
 
 export const questions: Question[] = [
@@ -448,3 +449,4 @@ export const questions: Question[] = [
 ];
 
 questions.push(...publicQuestions);
+questions.push(...publicQuestionsBatch2);
