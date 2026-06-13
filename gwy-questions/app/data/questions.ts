@@ -4,6 +4,7 @@ import { publicQuestionsBatch3 } from "@/app/data/public-questions-batch-3";
 import { publicQuestionsBatch4 } from "@/app/data/public-questions-batch-4";
 import { publicQuestionsBatch5 } from "@/app/data/public-questions-batch-5";
 import { publicQuestionsBatch6 } from "@/app/data/public-questions-batch-6";
+import { publicQuestionsBatch7 } from "@/app/data/public-questions-batch-7";
 import type { Question } from "@/lib/question-utils";
 
 export const questions: Question[] = [
@@ -458,3 +459,4 @@ questions.push(...publicQuestionsBatch3);
 questions.push(...publicQuestionsBatch4);
 questions.push(...publicQuestionsBatch5);
 questions.push(...publicQuestionsBatch6);
+questions.push(...publicQuestionsBatch7);
