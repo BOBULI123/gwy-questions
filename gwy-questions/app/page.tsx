@@ -12,6 +12,7 @@ export default function HomePage() {
     .filter((question) => question.year === 2026)
     .slice(0, 10);
   const latestHotTopics = hotTopics.slice(0, 5);
+  const provinceCount = new Set(questions.map((question) => question.province)).size;
 
   return (
     <main>
@@ -30,7 +31,7 @@ export default function HomePage() {
             <SearchPanel />
           </div>
           <div className="mt-6 text-sm font-semibold text-primary">
-            收录3,200+真题 | 覆盖32个省份 | 每日更新
+            已收录{questions.length}道真题/公开回忆题 | 覆盖{provinceCount}个地区 | 持续更新
           </div>
         </div>
       </section>
@@ -44,9 +45,8 @@ export default function HomePage() {
           <Layers3 className="hidden h-8 w-8 text-primary sm:block" />
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {typeMetas.map((type, index) => {
+          {typeMetas.map((type) => {
             const count = questions.filter((question) => question.type === type.slug).length;
-            const displayCount = [680, 540, 760, 510, 360, 350][index] ?? count;
             return (
               <Link key={type.slug} href={`/type/${type.slug}`}>
                 <Card className="h-full transition-all hover:-translate-y-0.5 hover:shadow-soft">
@@ -58,7 +58,7 @@ export default function HomePage() {
                     <CardDescription>{type.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <span className="text-2xl font-bold text-primary">{displayCount}</span>
+                    <span className="text-2xl font-bold text-primary">{count}</span>
                     <span className="ml-1 text-sm text-muted-foreground">道</span>
                   </CardContent>
                 </Card>

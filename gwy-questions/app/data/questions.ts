@@ -1,3 +1,4 @@
+import { publicQuestions } from "@/app/data/public-questions";
 import type { Question } from "@/lib/question-utils";
 
 export const questions: Question[] = [
@@ -347,9 +348,9 @@ export const questions: Question[] = [
   {
     id: "2026-guokao-009",
     year: 2026,
-    province: "鍥借€?",
+    province: "国考",
     type: "zonghefenxi",
-    typeName: "缁煎悎鍒嗘瀽",
+    typeName: "综合分析",
     difficulty: "hard",
     title: "2026国考模拟题风格：政府工作报告提出持续推进“人工智能+”行动，有人认为基层政务应用AI越多越好，也有人担心会削弱服务温度与公平，你怎么看？",
     content: "2026国考模拟题风格：政府工作报告提出持续推进“人工智能+”行动，有人认为基层政务应用AI越多越好，也有人担心会削弱服务温度与公平，你怎么看？"
@@ -357,9 +358,9 @@ export const questions: Question[] = [
   {
     id: "2026-zhejiang-004",
     year: 2026,
-    province: "娴欐睙",
+    province: "浙江",
     type: "zonghefenxi",
-    typeName: "缁煎悎鍒嗘瀽",
+    typeName: "综合分析",
     difficulty: "medium",
     title: "2026浙江模拟题风格：多地推进“高效办成一件事”，有干部认为流程越简越好，也有人担心责任边界模糊、风险上移。对此你怎么理解？",
     content: "2026浙江模拟题风格：多地推进“高效办成一件事”，有干部认为流程越简越好，也有人担心责任边界模糊、风险上移。对此你怎么理解？"
@@ -367,9 +368,9 @@ export const questions: Question[] = [
   {
     id: "2026-hebei-001",
     year: 2026,
-    province: "娌冲寳",
+    province: "河北",
     type: "renjiguanxi",
-    typeName: "浜洪檯鍏崇郴",
+    typeName: "人际关系",
     difficulty: "medium",
     title: "2026河北模拟题风格：你牵头推进老旧小区加装电梯，社区、物业和居民代表意见分歧较大，项目一度停滞，领导让你继续协调，你怎么办？",
     content: "2026河北模拟题风格：你牵头推进老旧小区加装电梯，社区、物业和居民代表意见分歧较大，项目一度停滞，领导让你继续协调，你怎么办？"
@@ -377,9 +378,9 @@ export const questions: Question[] = [
   {
     id: "2026-guangdong-004",
     year: 2026,
-    province: "骞夸笢",
+    province: "广东",
     type: "renjiguanxi",
-    typeName: "浜洪檯鍏崇郴",
+    typeName: "人际关系",
     difficulty: "hard",
     title: "2026广东模拟题风格：你与一名业务能力强但沟通方式比较直接的同事共同下沉企业走访，企业负责人只愿意和你沟通，同事因此有情绪，你怎么处理？",
     content: "2026广东模拟题风格：你与一名业务能力强但沟通方式比较直接的同事共同下沉企业走访，企业负责人只愿意和你沟通，同事因此有情绪，你怎么处理？"
@@ -387,9 +388,9 @@ export const questions: Question[] = [
   {
     id: "2026-hubei-002",
     year: 2026,
-    province: "婀栧寳",
+    province: "湖北",
     type: "yingjibian",
-    typeName: "搴旀€ュ簲鍙?",
+    typeName: "应急应变",
     difficulty: "hard",
     title: "2026湖北模拟题风格：政务服务平台升级首日，群众集中反映资格认证失败，现场排队、网上吐槽并持续发酵，窗口秩序也受到影响。作为值班负责人，你怎么办？",
     content: "2026湖北模拟题风格：政务服务平台升级首日，群众集中反映资格认证失败，现场排队、网上吐槽并持续发酵，窗口秩序也受到影响。作为值班负责人，你怎么办？"
@@ -397,9 +398,9 @@ export const questions: Question[] = [
   {
     id: "2026-fujian-002",
     year: 2026,
-    province: "绂忓缓",
+    province: "福建",
     type: "yingjibian",
-    typeName: "搴旀€ュ簲鍙?",
+    typeName: "应急应变",
     difficulty: "medium",
     title: "2026福建模拟题风格：汛期临时安置点物资发放时，有群众质疑分配不公并在短视频平台直播，引发围观。你在现场负责统筹处置，会怎么做？",
     content: "2026福建模拟题风格：汛期临时安置点物资发放时，有群众质疑分配不公并在短视频平台直播，引发围观。你在现场负责统筹处置，会怎么做？"
@@ -407,9 +408,9 @@ export const questions: Question[] = [
   {
     id: "2025-beijing-004",
     year: 2025,
-    province: "鍖椾含",
+    province: "北京",
     type: "zuzhiguanli",
-    typeName: "缁勭粐绠＄悊",
+    typeName: "组织管理",
     difficulty: "medium",
     title: "2025北京模拟题风格：围绕发展银发经济、提升为老服务质量，单位计划开展一次社区养老服务需求调研和政策宣传活动，领导交由你组织，你如何安排？",
     content: "2025北京模拟题风格：围绕发展银发经济、提升为老服务质量，单位计划开展一次社区养老服务需求调研和政策宣传活动，领导交由你组织，你如何安排？"
@@ -417,9 +418,9 @@ export const questions: Question[] = [
   {
     id: "2025-shanghai-002",
     year: 2025,
-    province: "涓婃捣",
+    province: "上海",
     type: "zuzhiguanli",
-    typeName: "缁勭粐绠＄悊",
+    typeName: "组织管理",
     difficulty: "hard",
     title: "2025上海模拟题风格：为落实高校毕业生就业支持政策，你单位准备举办一场“政策宣讲+岗位对接+职业指导”进校园活动，你会如何策划实施？",
     content: "2025上海模拟题风格：为落实高校毕业生就业支持政策，你单位准备举办一场“政策宣讲+岗位对接+职业指导”进校园活动，你会如何策划实施？"
@@ -427,9 +428,9 @@ export const questions: Question[] = [
   {
     id: "2026-shandong-004",
     year: 2026,
-    province: "灞变笢",
+    province: "山东",
     type: "ziworenzhi",
-    typeName: "鑷垜璁ょ煡",
+    typeName: "自我认知",
     difficulty: "medium",
     title: "2026山东模拟题风格：你报考的是基层岗位，有人说基层工作琐碎、压力大、成长慢。请结合你的经历，谈谈你为什么仍然选择基层、准备如何长期坚持。",
     content: "2026山东模拟题风格：你报考的是基层岗位，有人说基层工作琐碎、压力大、成长慢。请结合你的经历，谈谈你为什么仍然选择基层、准备如何长期坚持。"
@@ -437,11 +438,13 @@ export const questions: Question[] = [
   {
     id: "2026-jiangsu-005",
     year: 2026,
-    province: "姹熻嫃",
+    province: "江苏",
     type: "qingjingmoni",
-    typeName: "鎯呮櫙妯℃嫙",
+    typeName: "情景模拟",
     difficulty: "medium",
     title: "2026江苏模拟题风格：你是政务服务中心工作人员，一位老人因异地医保报销流程不熟悉、重复跑了几趟后情绪激动。请现场模拟你如何与他沟通。",
     content: "2026江苏模拟题风格：你是政务服务中心工作人员，一位老人因异地医保报销流程不熟悉、重复跑了几趟后情绪激动。请现场模拟你如何与他沟通。"
   }
 ];
+
+questions.push(...publicQuestions);

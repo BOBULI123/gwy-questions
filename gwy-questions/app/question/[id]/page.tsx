@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ExternalLink } from "lucide-react";
 import { questions } from "@/app/data/questions";
 import { FavoriteButton } from "@/components/site/favorite-button";
 import { ParseTabs } from "@/components/site/parse-tabs";
@@ -72,6 +72,30 @@ export default function QuestionPage({ params }: Props) {
               </div>
             </CardContent>
           </Card>
+
+          {question.referenceAnswer ? (
+            <Card>
+              <CardHeader>
+                <CardTitle>原创参考答案</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="whitespace-pre-line leading-8 text-muted-foreground">
+                  {question.referenceAnswer}
+                </div>
+                {question.sourceUrl ? (
+                  <a
+                    href={question.sourceUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                  >
+                    来源：{question.sourceName ?? "公开资料"}
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                ) : null}
+              </CardContent>
+            </Card>
+          ) : null}
 
           <Card>
             <CardHeader>

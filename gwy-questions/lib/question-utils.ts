@@ -17,6 +17,9 @@ export type Question = {
   difficulty: Difficulty;
   title: string;
   content: string;
+  referenceAnswer?: string;
+  sourceName?: string;
+  sourceUrl?: string;
 };
 
 export const typeMetas: Array<{
