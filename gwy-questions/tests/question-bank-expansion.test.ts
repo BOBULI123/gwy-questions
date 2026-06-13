@@ -4,10 +4,10 @@ import { typeMetas } from "@/lib/question-utils";
 
 describe("expanded question bank", () => {
   it("contains a substantial first batch of sourced questions with original answers", () => {
-    expect(questions.length).toBeGreaterThanOrEqual(500);
+    expect(questions.length).toBeGreaterThanOrEqual(600);
 
     const sourcedQuestions = questions.filter((question) => question.sourceUrl);
-    expect(sourcedQuestions.length).toBeGreaterThanOrEqual(450);
+    expect(sourcedQuestions.length).toBeGreaterThanOrEqual(550);
     expect(
       sourcedQuestions.every(
         (question) =>
